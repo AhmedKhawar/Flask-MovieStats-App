@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{data.Title}} Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        margin-top: 50px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 90%;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .info p {
+        margin: 8px 0;
+        font-size: 16px;
+        color: #555;
+      }
+
+      .section-title {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .rating {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #007bff;
+        border-radius: 5px;
+      }
+
+      .rating p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{data.Title}} Info</h1>
+
+      <div class="info">
+        <p><strong>Runtime:</strong> {{data.Runtime}}</p>
+        <p><strong>Released:</strong> {{data.Released}}</p>
+        <p><strong>Director:</strong> {{data.Director}}</p>
+        <p><strong>Writers:</strong> {{data.Writer}}</p>
+        <p><strong>Actors:</strong> {{data.Actors}}</p>
+        <p><strong>Language:</strong> {{data.Language}}</p>
+
+        <p class="section-title">Ratings:</p>
+        {% for item in data.Ratings %}
+        <div class="rating">
+          <p><strong>{{item.Source}}:</strong> {{item.Value}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
