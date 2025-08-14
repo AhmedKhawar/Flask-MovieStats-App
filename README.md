@@ -7,13 +7,18 @@ Live Demo: https://movie-stats-finder-new.onrender.com
 **Features:**
 
 🔍 Search movies by name
+
 📊 View ratings, genre, and release year
+
 📝 Read the movie plot/description
+
 🎭 See cast and crew information (if available)
 
 **Tech Stack:**
 
 Python + Flask
+
 HTML + CSS (Jinja2 Templates)
+
 Movie API (OMDb / TMDb)
 
